@@ -1,4 +1,4 @@
-enum NavigationEnums { home, login, deafult }
+enum NavigationEnums { home, login, favourite, detail, deafult }
 
 extension NavigationConstantsValue on NavigationEnums {
   String get rawValue {
@@ -7,6 +7,10 @@ extension NavigationConstantsValue on NavigationEnums {
         return '/home';
       case NavigationEnums.login:
         return '/login';
+      case NavigationEnums.favourite:
+        return '/favourite';
+      case NavigationEnums.detail:
+        return '/detail';
       case NavigationEnums.deafult:
         return '/deafult';
     }
@@ -20,7 +24,10 @@ extension NavigationConstantsValue on NavigationEnums {
         return NavigationEnums.home;
       case '/login':
         return NavigationEnums.login;
-
+      case '/favourite':
+        return NavigationEnums.favourite;
+      case '/detail':
+        return NavigationEnums.detail;
       default:
         throw Exception('$val not found in $this');
     }
